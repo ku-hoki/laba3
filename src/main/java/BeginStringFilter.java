@@ -8,5 +8,6 @@ public class BeginStringFilter implements Filter{
     public boolean apply(String str){
         return str.startsWith(pattern);
     }
+
 }
 

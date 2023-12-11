@@ -19,5 +19,6 @@ public class ServiceProduct {//сервис товаров
             }
         }
         return count;
+
     }
 }

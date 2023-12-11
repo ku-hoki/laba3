@@ -39,5 +39,6 @@ class BeginStringFilterTest {
 
         assertTrue(res1);
         assertFalse(res2);
+
     }
 }

@@ -38,5 +38,6 @@ public class ProductBatch {//Партия товаров
 
     public void setPieceProducts(ArrayList<PackagedPieceProduct> pieceProducts) {
         this.pieceProducts = pieceProducts;
+
     }
 }
