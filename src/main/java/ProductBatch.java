@@ -23,4 +23,20 @@ public class ProductBatch {//Партия товаров
         }
         return bruttoMass;
     }
+
+    public ArrayList<PackagedWeightedProduct> getWeightedProducts() {
+        return weightedProducts;
+    }
+
+    public void setWeightedProducts(ArrayList<PackagedWeightedProduct> weightedProducts) {
+        this.weightedProducts = weightedProducts;
+    }
+
+    public ArrayList<PackagedPieceProduct> getPieceProducts() {
+        return pieceProducts;
+    }
+
+    public void setPieceProducts(ArrayList<PackagedPieceProduct> pieceProducts) {
+        this.pieceProducts = pieceProducts;
+    }
 }

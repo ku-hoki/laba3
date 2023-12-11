@@ -2,7 +2,7 @@ public class PackagedWeightedProduct {// упакованный весовой �
     private PackingProduct packing;
     private WeightProduct product;
     private double weight;
-    public PackagedWeightedProduct(WeightProduct product, double weight, PackingProduct packing){
+    public PackagedWeightedProduct(WeightProduct product,  PackingProduct packing,double weight){
         this.product = product;
         this.weight = weight;
         this.packing = packing;
@@ -14,5 +14,9 @@ public class PackagedWeightedProduct {// упакованный весовой �
 
     public double getBruttoMass(){// вес упаковки и товара вместе
         return weight + packing.getWeight();
+    }
+
+    public String getName(){
+        return product.getNameProduct();
     }
 }

@@ -3,6 +3,11 @@ public class PackagedPieceProduct {//упакованный штучный то�
     private PieceProduct product;
     private int countItems;
 
+    public PackagedPieceProduct(PieceProduct product, PackingProduct packing,  int countItems){
+        this.countItems = countItems;
+        this.product = product;
+        this.packing = packing;
+    }
     public int getCountItems() {
         return countItems;
     }
@@ -13,5 +18,9 @@ public class PackagedPieceProduct {//упакованный штучный то�
 
     public double getBruttoMass(){
         return packing.getWeight()+product.getWeightPieceProduct()*countItems;//вес упаковки и всех единиц товара вместе
+    }
+
+    public String getName(){
+        return product.getNameProduct();
     }
 }
