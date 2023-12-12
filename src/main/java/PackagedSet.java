@@ -8,8 +8,8 @@ public class PackagedSet {//упакованный набор товаров
 
     public PackagedSet(PackingProduct packaging, List<PackagedWeightedProduct> weightedProducts, List<PackagedPieceProduct> pieceProducts) {
         this.packing = packaging;
-        this.weightedProducts = new ArrayList<>(weightedProducts);
-        this.pieceProducts = new ArrayList<>(pieceProducts);
+        this.weightedProducts = weightedProducts;
+        this.pieceProducts = pieceProducts;
     }
 
     public double getNettoMass(){
@@ -24,6 +24,15 @@ public class PackagedSet {//упакованный набор товаров
     }
 
     public double getBruttoMass(){
-        return getNettoMass()+ packing.getWeight();
+        double bruttoMass = 0;
+        for (int i = 0; i < weightedProducts.size(); i++){
+            bruttoMass += weightedProducts.get(i).getBruttoMass();
+        }
+        for (int i = 0; i < pieceProducts.size(); i++){
+            bruttoMass += pieceProducts.get(i).getBruttoMass();
+        }
+
+        return bruttoMass + packing.getWeight();
+
     }
 }
